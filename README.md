@@ -17,6 +17,7 @@ Easy installation via install.sh
 Installation
 
 Clone or download this repository:
+```bash
 git clone https://github.com/menhoudj/my-fastfetch-config
 cd my-fastfetch-config
 chmod +x install.sh
