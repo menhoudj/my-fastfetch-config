@@ -17,8 +17,25 @@ Easy installation via install.sh
 Installation
 
 Clone or download this repository:
+on Arch base:
+# تثبيت fish و fastfetch على Ubuntu / Debian
+sudo apt update
+sudo apt install -y fish fastfetch git
+
+# تحميل الإعدادات
+git clone https://github.com/menhoudj/my-fastfetch-config
+cd my-fastfetch-config
+
+# إعطاء صلاحيات وتشغيل سكربت التثبيت
+chmod +x install.sh
+sudo ./install.sh
+
+
 ```bash
+sudo pacman -S fish
+sudo pacman -S fastfetch
 git clone https://github.com/menhoudj/my-fastfetch-config
 cd my-fastfetch-config
 chmod +x install.sh
 sudo ./install.sh
+
