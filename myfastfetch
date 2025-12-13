@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+# أو إن أردت zsh:
+# !/usr/bin/env zsh
+
+LOGO_DIR="$HOME/.config/fastfetch/logos"
+USED_FILE="$HOME/.config/fastfetch/used_logos.txt"
+
+fastfetch_random() {
+
+    if [ ! -d "$LOGO_DIR" ]; then
+        echo "مجلد الشعارات غير موجود: $LOGO_DIR"
+        return 1
+    fi
+
+    # قراءة كل الشعارات
+    mapfile -t all_logos < <(ls -1 "$LOGO_DIR")
+
+    if [ "${#all_logos[@]}" -eq 0 ]; then
+        echo "لا يوجد شعارات في المجلد $LOGO_DIR"
+        return 1
+    fi
+
+    # قراءة الشعارات المستخدمة
+    if [ -f "$USED_FILE" ]; then
+        mapfile -t used_logos < "$USED_FILE"
+    else
+        used_logos=()
+    fi
+
+    # إيجاد الشعارات غير المستخدمة
+    unused_logos=()
+    for logo in "${all_logos[@]}"; do
+        if ! printf '%s\n' "${used_logos[@]}" | grep -qx "$logo"; then
+            unused_logos+=("$logo")
+        fi
+    done
+
+    # إذا انتهت الشعارات، إعادة التعيين
+    if [ "${#unused_logos[@]}" -eq 0 ]; then
+        unused_logos=("${all_logos[@]}")
+        : > "$USED_FILE"
+    fi
+
+    # اختيار شعار عشوائي
+    rand_index=$(( RANDOM % ${#unused_logos[@]} ))
+    LOGO="${unused_logos[$rand_index]}"
+
+    # حفظ الشعار كمستخدم
+    echo "$LOGO" >> "$USED_FILE"
+
+    # تشغيل fastfetch
+    fastfetch --logo "$LOGO_DIR/$LOGO"
+}
+
+# استدعاء الدالة
+fastfetch_random
