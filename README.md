@@ -17,33 +17,14 @@ Easy installation via install.sh
 Installation
 
 Clone or download this repository:
-install on Arch base:
+how to install:
 ```bash
-sudo pacman -S fish
-sudo pacman -S fastfetch
 git clone https://github.com/menhoudj/my-fastfetch-config
 cd my-fastfetch-config
 chmod +x install.sh
 sudo ./install.sh
 ```
-install on Debian base:
-```bash
-sudo apt install fish
-sudo apt install fastfetch
-git clone https://github.com/menhoudj/my-fastfetch-config
-cd my-fastfetch-config
-chmod +x install.sh
-sudo ./install.sh
-```
-install on fedora base:
-```bash
-sudo dnf install fish
-sudo dnf install fastfetch
-git clone https://github.com/menhoudj/my-fastfetch-config
-cd my-fastfetch-config
-chmod +x install.sh
-sudo ./install.sh
-```
+
 
 
 
