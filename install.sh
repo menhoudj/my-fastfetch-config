@@ -1,49 +1,30 @@
 #!/bin/bash
 
-# =========================
-# Fastfetch Config Installer
-# =========================
+set -e
 
-# مسارات المصدر (داخل مجلد التحميل)
-SRC_DIR="$(pwd)"
-SRC_LOGOS="$SRC_DIR/logos"
-SRC_CONFIG_JSONC="$SRC_DIR/config.jsonc"
-SRC_CONFIG_FISH="$SRC_DIR/config.fish"
+echo "[*] Installing fastfetch..."
 
-# مسارات الوجهة
-DEST_FASTFETCH="$HOME/.config/fastfetch"
-DEST_LOGOS="$DEST_FASTFETCH/logos"
-DEST_CONFIG_JSONC="$DEST_FASTFETCH/config.jsonc"
-DEST_CONFIG_FISH="$HOME/.config/fish/config.fish"
-
-# التحقق من وجود Fish و Fastfetch
-if ! command -v fish &> /dev/null; then
-    echo "Fish shell غير مثبت. يرجى تثبيته أولاً."
+# التحقق من مدير الحزم
+if command -v pacman >/dev/null 2>&1; then
+    sudo pacman -S --noconfirm fastfetch
+elif command -v apt >/dev/null 2>&1; then
+    sudo apt update
+    sudo apt install -y fastfetch
+elif command -v dnf >/dev/null 2>&1; then
+    sudo dnf install -y fastfetch
+else
+    echo "[!] Package manager not supported. Install fastfetch manually."
     exit 1
 fi
 
-if ! command -v fastfetch &> /dev/null; then
-    echo "fastfetch غير مثبت. يرجى تثبيته أولاً."
-    exit 1
-fi
+echo "[*] Creating ~/.config/fastfetch directory (if not exists)..."
+mkdir -p "$HOME/.config/fastfetch"
 
-# إنشاء مجلدات الوجهة إذا لم تكن موجودة
-mkdir -p "$DEST_LOGOS"
+echo "[*] Copying config.jsonc..."
+cp -f config.jsonc "$HOME/.config/fastfetch/"
 
-# نسخ الشعارات
-cp -r "$SRC_LOGOS/"* "$DEST_LOGOS/"
-echo "تم نسخ الشعارات إلى $DEST_LOGOS"
+echo "[*] Installing myfastfetch to /usr/local/bin..."
+sudo cp -f myfastfetch /usr/local/bin/myfastfetch
+sudo chmod +x /usr/local/bin/myfastfetch
 
-# نسخ config.jsonc واستبداله
-cp "$SRC_CONFIG_JSONC" "$DEST_CONFIG_JSONC"
-echo "تم استبدال ملف config.jsonc في $DEST_FASTFETCH"
-
-# نسخ config.fish واستبداله (مع عمل نسخة احتياطية)
-if [ -f "$DEST_CONFIG_FISH" ]; then
-    cp "$DEST_CONFIG_FISH" "$DEST_CONFIG_FISH.bak"
-    echo "تم عمل نسخة احتياطية من config.fish الحالية في config.fish.bak"
-fi
-cp "$SRC_CONFIG_FISH" "$DEST_CONFIG_FISH"
-echo "تم استبدال ملف config.fish"
-
-echo "تم التثبيت بنجاح! افتح تيرمنال Fish جديد لتطبيق الإعدادات."
+echo "[✓] Installation completed successfully."
