@@ -16,11 +16,6 @@
 # Project Images
 ![Project images](https://github.com/menhoudj/my-fastfetch-config/blob/main/Screenshot%20From%202025-12-15%2015-39-10.png)
 ---
-# VIDEO
-[![Watch Video](images/thumbnail.png)](https://www.facebook.com/reel/2590565814655335)
-
----
-
 ## Installation
 
 1. Clone the project:
