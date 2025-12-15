@@ -22,7 +22,7 @@ mkdir -p "$HOME/.config/fastfetch"
 
 echo "[*] Copying config.jsonc..."
 cp -f config.jsonc "$HOME/.config/fastfetch/"
-sudo mv logos "$HOME/.config/fastfetch/"
+mv logos "$HOME/.config/fastfetch/"
 
 echo "[*] Installing myfastfetch to /usr/local/bin..."
 sudo cp -f myfastfetch /usr/local/bin/myfastfetch
