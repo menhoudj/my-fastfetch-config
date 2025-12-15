@@ -8,8 +8,9 @@
 
 - Shows a different random anime image on each run.
 - Allows adding custom logos to display with the images.
-- Configurable via `config.jsonc` for advanced customization.
+-If you want to modify config.jsonc, you will find a great and useful file in the startup folder; move it to .config/fastfetch/
 - Lightweight and easy to use.
+- If you want to edit and add more logos, go to .config/fastfetch/logos
 
 ---
 
@@ -22,7 +23,6 @@
     chmod +x install.sh
     sudo ./install.sh
     myfastfetch
-```
 
 
 
