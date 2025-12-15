@@ -25,7 +25,13 @@
     chmod +x install.sh
     ./install.sh
     myfastfetch
-
+---
+## Terminal Suppot display image
+-kitty
+-Ghostty
+-iTerm2
+-Terminology
+-WezTerm
 
 
 
