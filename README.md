@@ -13,9 +13,9 @@
 - If you want to edit and add more logos, go to .config/fastfetch/logos
 
 ---
-#Project Images
+# Project Images
 ![Project images](https://github.com/menhoudj/my-fastfetch-config/blob/main/Screenshot%20From%202025-12-15%2015-39-10.png)
-
+---
 
 ## Installation
 
