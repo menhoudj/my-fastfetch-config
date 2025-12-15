@@ -8,7 +8,7 @@
 
 - Shows a different random anime image on each run.
 - Allows adding custom logos to display with the images.
--If you want to modify config.jsonc, you will find a great and useful file in the startup folder; move it to .config/fastfetch/
+-If you want to modify config.jsonc, you will find a great and useful file in the Project folder move it to .config/fastfetch/
 - Lightweight and easy to use.
 - If you want to edit and add more logos, go to .config/fastfetch/logos
 
