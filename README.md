@@ -17,9 +17,7 @@
 ![Project images](https://github.com/menhoudj/my-fastfetch-config/blob/main/Screenshot%20From%202025-12-15%2015-39-10.png)
 ---
 # VIDEO
-<iframe width="600" height="340" src="https://www.youtube.com/embed/2rWqdKU1vu8" 
-frameborder="0" allowfullscreen></iframe>
-
+[![Watch Video](images/thumbnail.png)](https://www.facebook.com/reel/2590565814655335)
 
 ---
 
