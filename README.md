@@ -1,29 +1,27 @@
-My Fastfetch Config
+# MyFastFetch 🎌
 
-This repository provides a custom Fastfetch configuration with random logo rotation for Fish shell. It allows you to have a fresh, unique logo displayed each time you open a terminal, while keeping your Fastfetch setup organized.
+**MyFastFetch** is a simple and stylish terminal tool that displays a random anime image every time you run the `myfastfetch` command. Each run shows a different image! You can also customize logos and tweak settings to fit your personal "rice."
 
-Features
+---
 
-Random logo selection from a predefined logos folder.
+## Features ✨
 
-Avoids repeating logos until all have been displayed.
+- Shows a different random anime image on each run.
+- Allows adding custom logos to display with the images.
+- Configurable via `config.jsonc` for advanced customization.
+- Lightweight and easy to use.
 
-Fully replaces config.fish to automatically call Fastfetch on terminal startup.
+---
 
-Replaces Fastfetch config.jsonc with a custom configuration.
+## Installation
 
-Easy installation via install.sh
-
-Installation
-
-Clone or download this repository:
-how to install:
-```bash
-git clone https://github.com/menhoudj/my-fastfetch-config
-cd my-fastfetch-config
-chmod +x install.sh
-sudo ./install.sh
-myfastfetch
+1. Clone the project:
+   ```bash
+    git clone https://github.com/menhoudj/my-fastfetch-config
+    cd my-fastfetch-config
+    chmod +x install.sh
+    sudo ./install.sh
+    myfastfetch
 ```
 
 
