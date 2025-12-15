@@ -23,9 +23,8 @@
     git clone https://github.com/menhoudj/my-fastfetch-config
     cd my-fastfetch-config
     chmod +x install.sh
-    sudo ./install.sh
+    ./install.sh
     myfastfetch
-
 
 
 
