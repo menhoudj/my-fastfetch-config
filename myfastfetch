@@ -49,7 +49,7 @@ fastfetch_random() {
     echo "$LOGO" >> "$USED_FILE"
 
     # تشغيل fastfetch
-    fastfetch --logo "$LOGO_DIR/$LOGO"
+    fastfetch --logo "$LOGO_DIR/$LOGO" --logo-type kitty-direct
 }
 
 # استدعاء الدالة
