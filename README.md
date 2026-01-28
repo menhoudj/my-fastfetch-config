@@ -14,12 +14,11 @@
 
 ---
 # Project Images
+![Project Image 3](https://raw.githubusercontent.com/menhoudj/my-fastfetch-config/main/Screenshot2.png)
+
 | | |
 |---|---|
 | ![](https://raw.githubusercontent.com/menhoudj/my-fastfetch-config/main/Screenshot%20From%202025-12-15%2015-39-10.png) | ![](https://raw.githubusercontent.com/menhoudj/my-fastfetch-config/main/Screenshot1.png) |
-
-![Project Image 3](https://raw.githubusercontent.com/menhoudj/my-fastfetch-config/main/Screenshot2.png)
-
 ---
 ## Installation
 
