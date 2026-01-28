@@ -18,7 +18,7 @@
 
 | | |
 |---|---|
-| ![](https://raw.githubusercontent.com/menhoudj/my-fastfetch-config/main/Screenshot%20From%202025-12-15%2015-39-10.png) | ![](https://raw.githubusercontent.com/menhoudj/my-fastfetch-config/main/Screenshot1.png) |
+| ![](https://raw.githubusercontent.com/menhoudj/my-fastfetch-config/main/Screenshot%20From%202025-12-15%2015-39-10.png) | ![](https://raw.githubusercontent.com/menhoudj/my-fastfetch-config/main/Screenshot1.png)(https://raw.githubusercontent.com/menhoudj/my-fastfetch-config/main/Screenshot3.png) |
 ---
 ## Installation
 
